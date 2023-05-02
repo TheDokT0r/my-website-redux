@@ -1,5 +1,15 @@
+:root {
+    --text-clor: black;
+    --bg-color: white;
+
+    --text-color-dark: white;
+    --bg-color-dark: black;
+}
+
 html {
     font-family: "Roboto", sans-serif;
+    /* color: var(--text-color);
+    background-color: var(--bg-color); */
 }
 
 .container {

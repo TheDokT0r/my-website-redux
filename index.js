@@ -1,7 +1,8 @@
 const title = document.getElementById("title");
 const subtitle = document.getElementById("subtitle");
-// const darkModeBtn = document.getElementById("dark_mode_btn");
-// let darkMode = localStorage.getItem("darkMode");
+const darkModeBtn = document.getElementById("dark_mode_btn");
+const body = document.getElementById("body");
+let darkMode = localStorage.getItem("darkMode");
 
 const changeTitle = () => {
     title.textContent = "Don't you have anything better to do?";
@@ -13,13 +14,20 @@ title.addEventListener("click", changeTitle);
 subtitle.addEventListener("click", changeTitle);
 
 // Dark Mode
-// darkModeBtn.addEventListener("load", function () {
-//     if (localStorage.getItem("darkMode") === "true") {
-//         darkModeBtn.textContent = "Switch Dark Mode";
-//         darkMode = true;
-//         return;
-//     }
+darkModeBtn.addEventListener("load", function () {
+    if (darkMode === "true") {
+        darkModeBtn.textContent = "Switch Dark Mode";
 
-//     darkModeBtn.textContent = "Switch Light Mode";
-//     darkMode = false;
-// });
+        body.style.color = "white";
+        body.style.backgroundColor = "black";
+        body.style.borderColor = "white";
+        return;
+    }
+
+    darkModeBtn.textContent = "Switch Light Mode";
+
+    body.style.color = "black";
+    body.style.backgroundColor = "white";
+    body.style.borderColor = "black";
+});
+
