@@ -1,5 +1,5 @@
 html {
-    /* text-align: center; */
+    font-family: "Roboto", sans-serif;
 }
 
 .container {
@@ -55,4 +55,63 @@ h2:hover {
     top: 0;
     left: 0;
     text-align: left;
+}
+
+.projects_container {
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+
+    font: 20px "Roboto", sans-serif;
+}
+
+.monkes_title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    /* Center */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.funny_monkes_container {
+    /* margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+
+    font: 20px "Roboto", sans-serif; */
+}
+
+.monke {
+    /* Make image smaller */
+    width: 40%;
+
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 4px 4px 1px purple;
+
+    /* Center */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: transform 0.5s;
+}
+
+.monke:hover {
+    transform: scale(1.1);
+}
+
+.monke:active {
+    transform: scale(1.05);
 }
