@@ -14,7 +14,7 @@ title.addEventListener("click", changeTitle);
 subtitle.addEventListener("click", changeTitle);
 
 // Dark Mode
-darkModeBtn.addEventListener("load", function () {
+const checkCurrentTheme = () => {
     if (darkMode === "true") {
         darkModeBtn.textContent = "Switch Dark Mode";
 
@@ -29,5 +29,14 @@ darkModeBtn.addEventListener("load", function () {
     body.style.color = "black";
     body.style.backgroundColor = "white";
     body.style.borderColor = "black";
-});
+}
 
+
+darkModeBtn.addEventListener("load", checkCurrentTheme);
+
+darkModeBtn.addEventListener("click", () => {
+    checkCurrentTheme();
+    let current = localStorage.getItem("darkMode");
+
+    localStorage.setItem("darkMode", !current);
+});
