@@ -2,7 +2,6 @@ const title = document.getElementById("title");
 const subtitle = document.getElementById("subtitle");
 const darkModeBtn = document.getElementById("dark_mode_btn");
 const body = document.getElementById("body");
-let darkMode = localStorage.getItem("darkMode");
 
 const changeTitle = () => {
     title.textContent = "Don't you have anything better to do?";
@@ -15,28 +14,25 @@ subtitle.addEventListener("click", changeTitle);
 
 // Dark Mode
 const checkCurrentTheme = () => {
-    if (darkMode === "true") {
-        darkModeBtn.textContent = "Switch Dark Mode";
-
-        body.style.color = "white";
-        body.style.backgroundColor = "black";
-        body.style.borderColor = "white";
+    if (localStorage.getItem("darkMode") === "true") {
+        body.classList.add("dark");
+        darkModeBtn.textContent = "Light Mode";
         return;
     }
 
-    darkModeBtn.textContent = "Switch Light Mode";
-
-    body.style.color = "black";
-    body.style.backgroundColor = "white";
-    body.style.borderColor = "black";
+    body.classList.remove("dark");
+    body.classList.add("light");
 }
 
-
-darkModeBtn.addEventListener("load", checkCurrentTheme);
+document.addEventListener("DOMContentLoaded", checkCurrentTheme);
 
 darkModeBtn.addEventListener("click", () => {
+    let currentMode = localStorage.getItem("darkMode");
+    if (currentMode === "true") {
+        localStorage.setItem("darkMode", "false");
+    }
+    else {
+        localStorage.setItem("darkMode", "true");
+    }
     checkCurrentTheme();
-    let current = localStorage.getItem("darkMode");
-
-    localStorage.setItem("darkMode", !current);
 });

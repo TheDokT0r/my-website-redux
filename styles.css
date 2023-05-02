@@ -1,15 +1,24 @@
 :root {
-    --text-clor: black;
+    --text-color: black;
     --bg-color: white;
-
     --text-color-dark: white;
     --bg-color-dark: black;
+    --transition-time: 0.5s; /* Add transition time variable */
 }
 
 html {
     font-family: "Roboto", sans-serif;
-    /* color: var(--text-color);
-    background-color: var(--bg-color); */
+    transition: color var(--transition-time), background-color var(--transition-time); /* Use transition time variable */
+}
+
+.bright {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.dark {
+    color: var(--text-color-dark);
+    background-color: var(--bg-color-dark);
 }
 
 .container {
