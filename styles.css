@@ -117,6 +117,7 @@ h2:hover {
     border-radius: 10px;
     padding: 10px;
     box-shadow: 5px 5px 5px black;
+    margin-top: 200px;
 }
 
 .monke {
@@ -158,4 +159,33 @@ footer {
     margin: 10px;
     text-align: left;
     font: 20px "Roboto", sans-serif;
+}
+
+
+.experience_container {
+    margin-top: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    font: 20px "Roboto", sans-serif;
+    /* margin-bottom: 50vh; */
+}
+
+.experience_title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    /* Center */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.programming_lang {
+    height: 50px;
 }
